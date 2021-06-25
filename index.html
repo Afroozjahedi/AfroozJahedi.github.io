@@ -75,13 +75,16 @@
 								
 						        <u>"IterMatch", Statistical R Package for Multivariate Matching Problems</u>
 							    <p><b>Research Question: How to optimally match two groups of participants on multiple variables with missing data?</b>
-                                      To decipher the imaging data from functional connectivity MRI (fcMRI) scans, one must first eliminate the 
-								       undesirable effects of critical background variables before any pattern recognition procedures can be performed.
-								       In an observational study, treated subjects are often matched to control subjects with similar values of
-								       covariates in an effort to form treatment groups that are comparable. Currently, most of the observational
-								       studies match their subjects in a difficult and time consuming manner. In this study, a statistical R
-								       package is developed and implemented to obtain optimized balance on multiple variables. This package could
-								       be used for both small and large size sample size observational cohorts.<p>
+                                    Matching two groups on multiple confounding variables is one of the primary steps in conducting observational studies.
+									All existing matching algorithms can function only with a complete dataset, while none can function with missing data.
+									Datasets with these problems must impute or only complete cases can be considered in matching. Losing data because of
+									the limitations in a matching algorithm can decrease the power of the study as well as omit important information.
+									In this project, we introduce the R package iterMatch that tackles these shortcomings. This package finds a one-to-one 
+									subsample of the data that is balanced on all matching variables while incorporating missing values in an iterative manner.
+									Random forest is used as a crucial tool to handle missing values when constructing a distance matrix to be fitted to an
+									optimal matching algorithm. We measure the robustness of the matching results by injecting levels of missing values across
+									two medium and large datasets for comparison. More detail is provided in this chapter.<p>
+									
 									   <span class="image main"><img src="images/Algorithm1.jpg" alt="" /></span>
 						</article>
 
